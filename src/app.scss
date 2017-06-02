@@ -1,1 +1,16 @@
-@import './pages/home/home';
+// The whole kit and caboodle of foundation
+@import 'node_modules/foundation-sites/scss/foundation';
+
+// Base styles
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/type';
+@import './styles/structure';
+@import './styles/images';
+
+// Page level styling
+@import './pages/Home/home';
+@import './pages/About/about';
+@import './pages/NotFound/notfound';
+
+// Component level styling

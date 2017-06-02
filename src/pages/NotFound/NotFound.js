@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 
 class NotFound extends Component {
   render() {
-    const {
-      className,
-      ...props
-    } = this.props;
+    const {...props} = this.props;
     return (
-      <div className={className} {...props} >
+      <div className='not-found' {...props} >
         <p>Not found</p>
       </div>
     );
