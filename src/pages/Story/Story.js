@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Story extends Component {
-  render() {
-    return(
+const Story = () => {
+  return (
+    <div className="stories__story-item">
       <h1>Story</h1>
-    );
-  }
-
+    </div>
+  );
 }
 
 export default Story;
