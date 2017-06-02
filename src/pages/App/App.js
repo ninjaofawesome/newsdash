@@ -4,12 +4,13 @@ import Home from '../Home/Home';
 import About from '../About/About';
 import NotFound from '../NotFound/NotFound';
 import Story from '../Story/Story';
+import Navbar from '../../components/Navbar/Navbar';
 
 class App extends Component {
   render(){
     return (
       <div>
-        <h1>Yo this is where everything outside the route will go</h1>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path="/about" component={About} />
