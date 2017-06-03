@@ -1,0 +1,24 @@
+$base: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$base-heavy: 'Arial Black', Arial, Helvetica, sans-serif;
+
+@mixin LogoType(){
+  font-family: $base-heavy;
+  color: $white;
+  font-size: 38px;
+  line-height: rem-calc(57);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+@mixin ListType(){
+  font-family: $base;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  white-space: normal;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
+}

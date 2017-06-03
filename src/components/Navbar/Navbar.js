@@ -5,11 +5,19 @@ class Navbar extends Component {
   render() {
     return(
       <div className="navbar">
-        <ul className="navbar__route-list">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/stories">Stories</Link></li>
-        </ul>
+        <div className="navbar__wrapper">
+          <div className="navbar__logo">
+            <Link className="navbar__route-link--logo" to="/">catnews</Link>
+          </div>
+          <ul className="navbar__route-list">
+            <li className="navbar__route-item">
+              <Link className="navbar__route-link" to="/about">About</Link>
+            </li>
+            <li className="navbar__route-item">
+              <Link className="navbar__route-link" to="/stories">Stories</Link>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

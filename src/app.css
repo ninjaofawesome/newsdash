@@ -4,8 +4,99 @@
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+  background-color: #fff; }
+
+.body-content {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  margin-top: 3.5625rem; }
+
 .home {
   color: green; }
 
 .not-found {
   color: red; }
+
+.navbar {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.5625rem;
+  width: 100%;
+  background-color: #2357a0; }
+  .navbar__wrapper {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    max-width: 83.33333%;
+    display: block;
+    margin: 0 auto; }
+    @media print, screen and (min-width: 40em) {
+      .navbar__wrapper {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+  .navbar__logo {
+    display: inline;
+    margin-left: 2.3125rem; }
+  .navbar__route-list {
+    list-style-type: none;
+    display: inline-block;
+    position: absolute;
+    top: 0; }
+  .navbar__route-item {
+    display: inline;
+    height: 3.5625rem;
+    top: 0; }
+  .navbar__route-link {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    white-space: normal;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    padding: 1.1875rem 0.6875rem; }
+    .navbar__route-link:active, .navbar__route-link:focus, .navbar__route-link:hover {
+      background-color: #fff;
+      color: #2357a0;
+      outline: none; }
+    .navbar__route-link--logo {
+      font-family: "Arial Black", Arial, Helvetica, sans-serif;
+      color: #fff;
+      font-size: 38px;
+      line-height: 3.5625rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      padding: 1.1875rem 0.6875rem; }
+      .navbar__route-link--logo:active, .navbar__route-link--logo:focus, .navbar__route-link--logo:hover {
+        color: #fff; }

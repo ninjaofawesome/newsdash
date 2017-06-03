@@ -1,0 +1,61 @@
+.navbar {
+  @include max-width-row();
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: rem-calc(57);
+  width: 100%;
+  background-color: $brand-blue;
+
+  &__wrapper {
+    @include flex-grid-column(10);
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  &__logo {
+    display: inline;
+    margin-left: rem-calc(37);
+  }
+
+  &__route-list {
+    list-style-type: none;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+
+  &__route-item {
+    display: inline;
+    height: rem-calc(57);
+    top: 0;
+  }
+
+  &__route-link {
+    @include ListType();
+    color: $white;
+    padding: rem-calc(19 11);
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $white;
+      color: $brand-blue;
+      outline: none;
+    }
+
+    &--logo {
+      @include LogoType();
+
+      padding: rem-calc(19 11);
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
