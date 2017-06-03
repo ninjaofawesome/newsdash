@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import Story from '../Story/Story';
+import StoryData from './stories_data.json';
 
-const Stories = () => {
+class Stories extends Component {
+  constructor(){
+    super();
+    this.listItems = this.listItems.bind(this);
+  }
 
-  return (
-    <div className="stories">
-      <h1> stories</h1>
-      <ul className="stories__linked-list">
-        <li className="stories__linked-item"><Link to="/stories/1" className="stories__link">Local Cat Finally Catches Red Dot</Link></li>
-        <li className="stories__linked-item"><Link to="/stories/2" className="stories__link">WindowSill: Newest Hot Spot to Nap In the City</Link></li>
-        <li className="stories__linked-item"><Link to="/stories/3" className="stories__link">Kittens raise 12 dead mice for hairball awareness</Link></li>
-      </ul>
 
-      <Switch>
-        <Route path='/stories/:number' component={Story} />
-      </Switch>
-    </div>
-  );
+  listItems(allStories) {
+    return allStories.map((video, index) => {
+      return (
+        <li className="stories__linked-item" key={`video-${index}`}><Link to={`/stories/${video.video}`} className="stories__link">{video.title}</Link></li>);
+    });
+  }
+
+  render() {
+    const allStories = StoryData.videos;
+
+    return (
+      <div className="stories">
+        <h1> stories</h1>
+        <ul className="stories__linked-list">
+          {this.listItems(allStories)}
+        </ul>
+
+        <Switch>
+          { allStories && (
+            <Route path='/stories/:number' render={({ match }) => (
+              <Story storyData={allStories.find( item => item.video === match.params.number )} /> )} />
+          )}
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default Stories;
