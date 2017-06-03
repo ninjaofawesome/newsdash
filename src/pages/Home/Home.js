@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import Card from '../../components/Card/Card';
+import Post from '../../components/Post/Post';
+import NewsStrip from '../../components/NewsStrip/NewsStrip';
 
 class Home extends Component {
   render(){
     return(
-      <h1 className="home">I'm home!</h1>
+      <div className="home">
+        <Card />
+        <Post />
+        <NewsStrip />
+      </div>
     );
   }
 }

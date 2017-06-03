@@ -4,9 +4,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: rem-calc(57);
+  height: rem-calc(71);
   width: 100%;
   background-color: $brand-blue;
+  box-shadow: 0 rem-calc(5) rem-calc(15) $lt-gray;
 
   &__wrapper {
     @include flex-grid-column(10);
@@ -24,22 +25,20 @@
     list-style-type: none;
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: rem-calc(8);
   }
 
   &__route-item {
     display: inline;
-    height: rem-calc(57);
-    top: 0;
+    height: rem-calc(71);
   }
 
   &__route-link {
     @include ListType();
     color: $white;
-    padding: rem-calc(19 11);
+    padding: rem-calc(22 11);
 
-    &:active,
-    &:focus,
+
     &:hover {
       background-color: $white;
       color: $brand-blue;
