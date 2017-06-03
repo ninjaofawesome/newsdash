@@ -1,17 +1,22 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import Story from '../Story/Story';
 
 const Stories = () => {
+
   return (
     <div className="stories">
-      <h1>Stories</h1>
-      <ul className="stories__route-list">
-        <li><Link to='/stories/story'>Story 1</Link></li>
+      <h1> stories</h1>
+      <ul className="stories__linked-list">
+        <li className="stories__linked-item"><Link to="/stories/1" className="stories__link">Local Cat Finally Catches Red Dot</Link></li>
+        <li className="stories__linked-item"><Link to="/stories/2" className="stories__link">WindowSill: Newest Hot Spot to Nap In the City</Link></li>
+        <li className="stories__linked-item"><Link to="/stories/3" className="stories__link">Kittens raise 12 dead mice for hairball awareness</Link></li>
       </ul>
 
-      <Route path='stories/story' component={Story} />
+      <Switch>
+        <Route path='/stories/:number' component={Story} />
+      </Switch>
     </div>
   );
 }
