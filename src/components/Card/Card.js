@@ -17,7 +17,7 @@ class Card extends Component {
     return (
       <div className={main ? `${className}--main` : className }>
           <Link to={`/stories/${video}`} className={`${className}--pagelink`}>
-            <img className={`${className}--image`} src={image} />
+            <img className={`${className}--image`} src={image} alt={title} />
             <div className={`${className}--title`}>{title}</div>
             <div className={`${className}--author`}>{author}</div>
           </Link>

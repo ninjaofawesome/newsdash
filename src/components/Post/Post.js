@@ -10,19 +10,28 @@ class Post extends Component {
       title,
       author,
       video,
-      section
+      section,
+      listType
     } = this.props;
-    return (
-      <div className={`${className}--wrapper`}>
-        <Link to={`/stories/${video}`} className={`${className}--pagelink`}>
-          <div className={`${className}--title`}>{title}</div>
-          <div className={`${className}--author`}>{section}: {author}</div>
-        </Link>
-        <Switch>
-          <Route path="/stories/:number" component={Story} />
-        </Switch>
-      </div>
-    );
+
+    const formattedSection = section.toLowerCase();
+
+    if (formattedSection === listType) {
+      return (
+        <li className={`${className}--list-item`}>
+          <div className={`${className}--wrapper`}>
+            <Link to={`/stories/${video}`} className={`${className}--pagelink`}>
+              <div className={`${className}--title`}>{title}</div>
+              <div className={`${className}--author`}>{section}: {author}</div>
+            </Link>
+            <Switch>
+              <Route path="/stories/:number" component={Story} />
+            </Switch>
+          </div>
+        </li>
+      );
+    }
+    return null;
   }
 }
 
