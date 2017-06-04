@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Story = ({ storyData }) => {
-  console.log('storyData=', storyData)
+const Story = ({ allStories }) => {
+  console.log('storyData=', allStories)
   return (
     <div className="stories__story-item">
       <h1>Story</h1>

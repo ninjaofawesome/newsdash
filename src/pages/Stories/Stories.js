@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import Story from '../Story/Story';
-import StoryData from './stories_data.json';
+import StoryData from '../../data/stories_data.json';
 
 class Stories extends Component {
   constructor(){
@@ -21,6 +21,7 @@ class Stories extends Component {
   render() {
     const allStories = StoryData.videos;
 
+
     return (
       <div className="stories">
         <h1> stories</h1>
@@ -31,7 +32,7 @@ class Stories extends Component {
         <Switch>
           { allStories && (
             <Route path='/stories/:number' render={({ match }) => (
-              <Story storyData={allStories.find( item => item.video === match.params.number )} /> )} />
+              <Story allStories={allStories.find( item => item.video === match.params.number )} /> )} />
           )}
         </Switch>
       </div>

@@ -1,0 +1,43 @@
+{ "videos": [
+  {
+    "title": "Cat Finally Catches Red Dot",
+    "image": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_scale,h_400,w_600/v1496549235/hannah/catnews/catplaying4.jpg",
+    "url": "https://www.youtube.com/watch?v=7ZC8bZhhIjs",
+    "author": "Tom Cat",
+    "section": "National",
+    "video": 1
+  },
+  {
+    "title": "WindowSill: Newest Hot Spot to Nap In the City",
+    "image": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_scale,h_400,w_600/v1496549235/hannah/catnews/catplaying2.jpg",
+    "url": "https://www.youtube.com/watch?v=vwji6HiXWCs",
+    "author": "Grumpy Cat",
+    "section": "Local",
+    "video": 2
+  },
+  {
+    "title": "Local Kitten Scout troop gives 12 dead mice to Hairball Awareness organizers, unsolicited",
+    "image": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_crop,h_400,w_600/v1496549235/hannah/catnews/catplaying3.jpg",
+    "url": "https://www.youtube.com/watch?v=-I5UBUBrCJ8",
+    "author": "Lil Bub",
+    "section": "Local",
+    "video": 3
+  },
+  {
+    "title": "Wild dog terrorizes innocent bystander in soft goods incident",
+    "image": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_scale,h_400,w_600/v1496549235/hannah/catnews/catplaying1.jpg",
+    "url": "https://www.youtube.com/watch?v=fjxyoXDGaAY",
+    "author": "Grumpy Cat",
+    "section": "National",
+    "video": 4
+  },
+  {
+    "title": "Mouse Hunt Number One Hit At Box Office",
+    "image": "https://res.cloudinary.com/ninjaofawesome/image/upload/c_scale,h_400,w_600/v1496549235/hannah/catnews/catplaying5.jpg",
+    "url": "https://www.youtube.com/watch?v=qnUC-TOyrVw",
+    "author": "Garfield T. Cat",
+    "section": "Entertainment",
+    "video": 5
+  }
+]}
+
