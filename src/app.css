@@ -28,10 +28,56 @@ body {
   display: flex;
   flex-flow: row wrap;
   max-width: 100%;
-  margin-top: 3.5625rem; }
+  margin-top: 4.4375rem; }
 
-.home {
-  color: green; }
+.home-wrapper {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 1.25rem; }
+
+.home__post-container, .home__sidebar-container {
+  flex: 0 0 20.83333%;
+  max-width: 20.83333%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 20.83333%; }
+  @media print, screen and (min-width: 40em) {
+    .home__post-container, .home__sidebar-container {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+.home__top-stories-container {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 50%; }
+  @media print, screen and (min-width: 40em) {
+    .home__top-stories-container {
+      padding-right: 0.9375rem;
+      padding-left: 0.9375rem; } }
+
+.home__post-list-title {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: calc(16px * 1.05);
+  font-weight: 900;
+  position: relative; }
+  .home__post-list-title::after {
+    display: inline-block;
+    content: " ";
+    width: 100%;
+    height: 0.07812rem;
+    background-color: #e5e5e5;
+    margin-top: 0.125rem; }
+
+.home__post-list {
+  list-style-type: none;
+  padding: 0; }
 
 .not-found {
   color: red; }
@@ -49,7 +95,8 @@ body {
   height: 4.4375rem;
   width: 100%;
   background-color: #2357a0;
-  box-shadow: 0 0.3125rem 0.9375rem #999; }
+  box-shadow: 0 0.3125rem 0.9375rem #999;
+  z-index: 10; }
   .navbar__wrapper {
     flex: 0 0 83.33333%;
     max-width: 83.33333%;
@@ -102,9 +149,96 @@ body {
       .navbar__route-link--logo:active, .navbar__route-link--logo:focus, .navbar__route-link--logo:hover {
         color: #fff; }
 
-.map__container {
-  height: 250px;
-  width: 300px; }
+.post__list-item {
+  margin-bottom: 0.3125rem; }
+  .post__list-item::after {
+    display: inline-block;
+    content: " ";
+    width: 100%;
+    height: 0.0625rem;
+    background-color: #e5e5e5; }
 
-#map {
-  height: 250px; }
+.post__page-link {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  font-size: 16px;
+  line-height: calc(16px * 1.05);
+  font-weight: 400;
+  text-decoration: none; }
+  .post__page-link:active, .post__page-link:focus, .post__page-link:hover, .post__page-link:visited {
+    text-decoration: none;
+    outline: 0; }
+
+.top-stories-card__main-card-wrapper {
+  position: relative;
+  z-index: 0;
+  margin-bottom: 0.9375rem; }
+
+.top-stories-card__card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.9375rem; }
+
+.top-stories-card__page-link {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #000;
+  font-size: 22px;
+  line-height: calc(22px * 1.05);
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: auto;
+  width: 100%; }
+  .top-stories-card__page-link:active, .top-stories-card__page-link:focus, .top-stories-card__page-link:hover, .top-stories-card__page-link:visited {
+    text-decoration: none;
+    outline: 0; }
+
+.top-stories-card__main-title {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 32px;
+  line-height: calc(32px * 1.05);
+  font-weight: 400;
+  text-decoration: none;
+  position: absolute;
+  bottom: 1.5625rem;
+  left: 0.3125rem;
+  z-index: 2; }
+  .top-stories-card__main-title:active, .top-stories-card__main-title:focus, .top-stories-card__main-title:hover, .top-stories-card__main-title:visited {
+    text-decoration: none;
+    outline: 0; }
+
+.top-stories-card__image {
+  width: 12.5rem;
+  flex-grow: 0;
+  flex-shrink: 0; }
+
+.top-stories-card__text-wrapper {
+  padding-left: 0.9375rem; }
+
+.top-stories-card__title {
+  text-align: left; }
+
+.map__title-bar {
+  width: 18.75rem;
+  height: 1.875rem;
+  background-color: #2357a0;
+  color: #fff;
+  display: flex;
+  flex-align: center;
+  align-items: center; }
+
+.map__title {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: calc(20px * 1.05);
+  font-weight: 900;
+  width: 100%; }
+
+.map__wrapper {
+  height: 15.625rem;
+  width: 18.75rem; }

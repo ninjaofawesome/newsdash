@@ -1,0 +1,22 @@
+.post {
+
+  &__list-item {
+    margin-bottom: rem-calc(5);
+
+    &::after {
+      display: inline-block;
+      content: " ";
+      width: 100%;
+      height: rem-calc(1);
+      background-color: $border-gray;
+    }
+  }
+
+  &__page-link {
+    @include LinkType();
+  }
+
+  &__title {
+  }
+
+}

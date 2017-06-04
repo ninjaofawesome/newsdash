@@ -12,7 +12,7 @@ class Home extends Component {
   render(){
     const allStories = StoryData.videos;
     return(
-      <div className="home">
+      <div className="home-wrapper">
         <div className="home__post-container">
           <h2 className="home__post-list-title">Local</h2>
           <ul className="home__post-list">
@@ -20,7 +20,7 @@ class Home extends Component {
               return(
                 <Post
                   key={`homePost-${index}`}
-                  className="home__post"
+                  className="post"
                   title={item.title}
                   author={item.author}
                   video={item.video}
@@ -36,7 +36,7 @@ class Home extends Component {
               return(
                 <Post
                   key={`homePost-${index}`}
-                  className="home__post"
+                  className="post"
                   title={item.title}
                   author={item.author}
                   video={item.video}
@@ -52,7 +52,7 @@ class Home extends Component {
               return(
                 <Post
                   key={`homePost-${index}`}
-                  className="home__post"
+                  className="post"
                   title={item.title}
                   author={item.author}
                   video={item.video}
@@ -65,18 +65,15 @@ class Home extends Component {
         </div>
         <div className="home__top-stories-container">
           {allStories.map((item, index) =>{
-          // eslint-disable-next-line
-          const main = (index === 0) ? true : false;
-          // eslint-enable-next-line
             return(
               <Card
                 key={`homeCard-${index}`}
-                className="home__card"
+                className="top-stories-card"
                 title={item.title}
                 image={item.image}
                 author={item.author}
                 video={item.video}
-                main
+                main={(index === 0) ? true : false}
               />
             );
           })}

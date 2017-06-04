@@ -1,11 +1,22 @@
 .map {
 
-  &__container {
-    height: 250px;
-    width: 300px;
+  &__title-bar{
+    width: rem-calc(300);
+    height: rem-calc(30);
+    background-color: $brand-blue;
+    color: $white;
+    display: flex;
+    flex-align: center;
+    align-items: center;
   }
-}
 
-#map {
-  height: 250px;
+  &__title {
+    @include HeavyType(20px, $white);
+    width: 100%;
+  }
+
+  &__wrapper {
+    height: rem-calc(250);
+    width: rem-calc(300);
+  }
 }

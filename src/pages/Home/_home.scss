@@ -1,3 +1,35 @@
+.home-wrapper {
+  @include flex-grid-row();
+  margin-top: rem-calc(20);
+}
+
 .home {
-  color: green;
+
+  &__post-container,
+  &__sidebar-container {
+    @include flex-grid-column(2.5);
+  }
+
+  &__top-stories-container {
+    @include flex-grid-column(6);
+  }
+
+  &__post-list-title {
+    @include HeavyType();
+    position: relative;
+
+    &::after {
+      display: inline-block;
+      content: " ";
+      width: 100%;
+      height: rem-calc(1.25);
+      background-color: $border-gray;
+      margin-top: rem-calc(2);
+    }
+  }
+
+  &__post-list {
+    list-style-type: none;
+    padding: 0;
+  }
 }

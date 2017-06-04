@@ -8,6 +8,7 @@
   width: 100%;
   background-color: $brand-blue;
   box-shadow: 0 rem-calc(5) rem-calc(15) $lt-gray;
+  z-index: 10;
 
   &__wrapper {
     @include flex-grid-column(10);

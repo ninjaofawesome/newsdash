@@ -1,5 +1,4 @@
 @mixin max-width-row() {
-
   @include flex-grid-row();
   max-width: 100%;
 }

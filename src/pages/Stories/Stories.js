@@ -24,7 +24,7 @@ class Stories extends Component {
 
     return (
       <div className="stories">
-        <h1> stories</h1>
+        <h2>Stories Page Coming Soon!</h2>
         <ul className="stories__linked-list">
           {this.listItems(allStories)}
         </ul>

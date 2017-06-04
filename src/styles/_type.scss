@@ -23,3 +23,28 @@ $base-heavy: 'Arial Black', Arial, Helvetica, sans-serif;
   text-decoration: none;
   text-transform: capitalize;
 }
+
+@mixin HeavyType($size: 16px, $color: $black){
+  font-family: $base;
+  color: $color;
+  font-size: $size;
+  line-height: calc(#{$size} * 1.05);
+  font-weight: 900;
+}
+
+@mixin LinkType($size: 16px, $color: $black){
+  font-family: $base;
+  color: $color;
+  font-size: $size;
+  line-height: calc(#{$size} * 1.05);
+  font-weight: 400;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    text-decoration: none;
+    outline: 0;
+  }
+}

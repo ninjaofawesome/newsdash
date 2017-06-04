@@ -18,16 +18,14 @@ class Post extends Component {
 
     if (formattedSection === listType) {
       return (
-        <li className={`${className}--list-item`}>
-          <div className={`${className}--wrapper`}>
-            <Link to={`/stories/${video}`} className={`${className}--pagelink`}>
-              <div className={`${className}--title`}>{title}</div>
-              <div className={`${className}--author`}>{section}: {author}</div>
-            </Link>
-            <Switch>
-              <Route path="/stories/:number" component={Story} />
-            </Switch>
-          </div>
+        <li className={`${className}__list-item`}>
+          <Link to={`/stories/${video}`} className={`${className}__page-link`}>
+            <div className={`${className}__title`}>{title}</div>
+            <div className={`${className}__author`}>{section}: {author}</div>
+          </Link>
+          <Switch>
+            <Route path="/stories/:number" component={Story} />
+          </Switch>
         </li>
       );
     }

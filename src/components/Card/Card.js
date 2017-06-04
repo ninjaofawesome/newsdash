@@ -9,18 +9,35 @@ class Card extends Component {
       className,
       title,
       image,
-      author,
       video,
       main
     } = this.props;
 
-    return (
-      <div className={main ? `${className}--main` : className }>
-          <Link to={`/stories/${video}`} className={`${className}--pagelink`}>
-            <img className={`${className}--image`} src={image} alt={title} />
-            <div className={`${className}--title`}>{title}</div>
-            <div className={`${className}--author`}>{author}</div>
+    if (main) {
+      return (
+        <div className={`${className}__main-card-wrapper` }>
+          <Link to={`/stories/${video}`} className={`${className}__page-link`}>
+            <img className={`${className}__main-image`} src={image} alt={title} />
+            <div className={`${className}__main-title`}>{title}</div>
           </Link>
+          <Switch>
+            <Route path="/stories/:number" component={Story} />
+          </Switch>
+        </div>
+      );
+
+    }
+
+    return (
+      <div className={`${className}__card-wrapper`}>
+        <Link to={`/stories/${video}`} className={`${className}__page-link`}>
+          <div className={`${className}__image-wrapper`}>
+            <img className={`${className}__image`} src={image} alt={title} />
+          </div>
+          <div className={`${className}__text-wrapper`}>
+            <div className={`${className}__title`}>{title}</div>
+          </div>
+        </Link>
         <Switch>
           <Route path="/stories/:number" component={Story} />
         </Switch>

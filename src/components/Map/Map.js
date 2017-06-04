@@ -28,8 +28,10 @@ class Map extends Component {
   render() {
     return (
       <div className="map">
-        <h2 className="map__title">Bird Tracker</h2>
-        <div ref="map" className="map__container" />
+        <div className="map__title-bar">
+          <h2 className="map__title">Bird Tracker</h2>
+        </div>
+        <div ref="map" className="map__wrapper" />
       </div>
     );
   }
