@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "text": "Thursday",
+      "num": 77
+    },
+    {
+      "text": "Friday",
+      "num": 75
+    },
+    {
+      "text": "Saturday",
+      "num": 74
+    },
+    {
+      "text": "Sunday",
+      "num": 69
+    },
+    {
+      "text": "Monday",
+      "num": 73
+    },
+    {
+      "text": "Tuesday",
+      "num": 65
+    },
+    {
+      "text": "Wednesday",
+      "num": 65
+    }
+  ]
+}

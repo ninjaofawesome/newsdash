@@ -13,6 +13,7 @@
   &__title {
     @include HeavyType(20px, $white);
     width: 100%;
+    text-align: center;
   }
 
   &__wrapper {

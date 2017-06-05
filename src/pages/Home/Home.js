@@ -3,10 +3,9 @@ import Card from '../../components/Card/Card';
 import StoryData from '../../data/stories_data.json';
 import Post from '../../components/Post/Post';
 import Map from '../../components/Map/Map';
-import SideBar from '../../components/Sidebar/Sidebar';
+// import SideBar from '../../components/Sidebar/Sidebar';
 
-//todo: organize post by list, section
-//make sidebar secition
+//todo: get d3 sidebar working and in place
 
 class Home extends Component {
   render(){
@@ -80,7 +79,6 @@ class Home extends Component {
         </div>
         <div className="home__sidebar-container">
           <Map />
-          <SideBar />
         </div>
       </div>
     );
