@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
-import Story from '../../pages/Story/Story';
 
 class Post extends Component {
   render() {
@@ -23,9 +21,6 @@ class Post extends Component {
             <div className={`${className}__title`}>{title}</div>
             <div className={`${className}__author`}>{section}: {author}</div>
           </Link>
-          <Switch>
-            <Route path="/stories/:number" component={Story} />
-          </Switch>
         </li>
       );
     }

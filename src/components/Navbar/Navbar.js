@@ -14,9 +14,6 @@ class Navbar extends Component {
               <Link className="navbar__route-link" to="/">Home</Link>
             </li>
             <li className="navbar__route-item">
-              <Link className="navbar__route-link" to="/about">About</Link>
-            </li>
-            <li className="navbar__route-item">
               <Link className="navbar__route-link" to="/stories">Stories</Link>
             </li>
           </ul>

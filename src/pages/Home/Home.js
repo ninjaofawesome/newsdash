@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router';
 import Card from '../../components/Card/Card';
 import StoryData from '../../data/stories_data.json';
 import Post from '../../components/Post/Post';
 import Map from '../../components/Map/Map';
+import Story from '../../pages/Story/Story';
 // import SideBar from '../../components/Sidebar/Sidebar';
 
 //todo: get d3 sidebar working and in place
@@ -61,6 +63,9 @@ class Home extends Component {
               );
             })}
           </ul>
+          <Switch>
+            <Route path="/stories/:number" component={Story} />
+          </Switch>
         </div>
         <div className="home__top-stories-container">
           {allStories.map((item, index) =>{
