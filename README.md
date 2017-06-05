@@ -2,7 +2,7 @@
 
 ## What is this?
 
-Newsdash is a project I am building to get more familiar with routing and to try building a few components.
+Newsdash is a project I am building to get more familiar with routing and to try building a few components.  Additionally, it incorporates the Google Maps API and D3.
 
 ## How do I install it?
 
