@@ -320,7 +320,7 @@ body {
 
 .sidebar__title {
   color: #000;
-  margin-bottom: 0;
+  margin-bottom: 0.3125rem;
   width: 18.75rem;
   text-align: center;
   font-weight: 400; }

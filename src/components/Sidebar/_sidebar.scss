@@ -28,7 +28,7 @@
 
   &__title {
     color: $black;
-    margin-bottom: 0;
+    margin-bottom: rem-calc(5);
     width: rem-calc(300);
     text-align: center;
     font-weight: 400;
