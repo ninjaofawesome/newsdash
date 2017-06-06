@@ -2,3 +2,14 @@
   @include flex-grid-row();
   max-width: 100%;
 }
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

@@ -292,3 +292,35 @@ body {
 .map__wrapper {
   height: 15.625rem;
   width: 18.75rem; }
+
+.sidebar__container {
+  width: 18.75rem;
+  border-left: 0.0625rem solid #999;
+  border-right: 0.0625rem solid #999;
+  border-bottom: 0.0625rem solid #999;
+  border-top: 0.3125rem solid #2357a0; }
+  .sidebar__container:before, .sidebar__container:after {
+    content: "";
+    display: table; }
+  .sidebar__container:after {
+    clear: both; }
+
+.sidebar__data-bar {
+  background-color: #2357a0;
+  color: #fff;
+  margin: 0.3125rem auto;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  float: left; }
+
+.sidebar__sun-icon {
+  color: #e58200;
+  font-weight: 700;
+  margin: 0 0.3125rem; }
+
+.sidebar__title {
+  color: #000;
+  margin-bottom: 0;
+  width: 18.75rem;
+  text-align: center;
+  font-weight: 400; }

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-import { scaleLinear } from 'd3-scale';
-import { max } from 'd3-array';
-// import { select } from 'd3-selection';
-import Data from './sidebar_d3.json';
+import Data from '../../data/sidebar_d3.json';
 
 class Sidebar extends Component {
   constructor(props){
@@ -20,30 +17,24 @@ class Sidebar extends Component {
   }
 
   createBarChart(){
-    //todo: data formatting incorrect. :/
-    const data = Data;
-    const width= 300;
-    const node = this.node
-    const dataMax = max(data, (d) => { return d.num })
-    const yScale = scaleLinear()
-      .domain([0, dataMax])
-      .range([0, width])
-      d3.select(node).selectAll('rect').data(data).enter().append('rect')
+    const data = Data.data;
+    const width= 250;
+    const x = d3.scaleLinear().domain([0, d3.max(data, (d) => { return d.num })]).range([0, width]);
 
-      d3.select(node).selectAll('rect').data(data).exit().remove()
-
-      d3.select(node).selectAll('rect').data(data).style('fill', '#fe9922').attr('x', (d,i) => i * 25).attr('y', d => width - yScale(d)).attr('height', d => yScale(d)).attr('width', 25)
+    d3.select("#bar").selectAll("div").data(data).enter().append("div").attr("class", "sidebar__data-bar").style("width", function (d) {
+      const number = d.num;
+      return x(number) + "px";
+    }).text(function (d) {
+      const weather = d.text + ': ' + d.num;
+      return weather;
+    }).append("i").attr("class", "fa fa-sun-o sidebar__sun-icon");
   }
 
-  render(){
+  render() {
     return(
       <div className="sidebar">
-        <h2 className="sidebar__title">Your Cat-U-Weather Forecast</h2>
-        <svg
-          ref={node => this.node = node}
-          width={300}
-          height={250}
-        />
+        <h2 className="sidebar__title">Cat-U-Weather Forecast</h2>
+        <div id="bar" className="sidebar__container"/>
       </div>
     );
   }

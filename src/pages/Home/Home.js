@@ -5,9 +5,7 @@ import StoryData from '../../data/stories_data.json';
 import Post from '../../components/Post/Post';
 import Map from '../../components/Map/Map';
 import Story from '../../pages/Story/Story';
-// import SideBar from '../../components/Sidebar/Sidebar';
-
-//todo: get d3 sidebar working and in place
+import SideBar from '../../components/Sidebar/Sidebar';
 
 class Home extends Component {
   render(){
@@ -84,6 +82,7 @@ class Home extends Component {
         </div>
         <div className="home__sidebar-container">
           <Map />
+          <SideBar />
         </div>
       </div>
     );

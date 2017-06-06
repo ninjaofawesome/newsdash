@@ -1,0 +1,36 @@
+.sidebar {
+
+  &__container{
+    @include clearfix();
+
+    width: rem-calc(300);
+    border-left: rem-calc(1) solid $lt-gray;
+    border-right: rem-calc(1) solid $lt-gray;
+    border-bottom: rem-calc(1) solid $lt-gray;
+    border-top: rem-calc(5) solid $brand-blue;
+  }
+
+
+  &__data-bar {
+    background-color: $brand-blue;
+    color: $white;
+    margin: rem-calc(5) auto;
+    height: rem-calc(35);
+    line-height: rem-calc(35);
+    float: left;
+  }
+
+  &__sun-icon {
+    color: $brand-yellow;
+    font-weight: 700;
+    margin: 0 rem-calc(5);
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 0;
+    width: rem-calc(300);
+    text-align: center;
+    font-weight: 400;
+  }
+}
