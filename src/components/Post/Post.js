@@ -24,7 +24,14 @@ class Post extends Component {
         </li>
       );
     }
-    return null;
+    return (
+        <li className={`${className}__list-item`}>
+          <Link to={`/stories/${video}`} className={`${className}__page-link`}>
+            <div className={`${className}__title`}>{title}</div>
+            <div className={`${className}__author`}>{section}: {author}</div>
+          </Link>
+        </li>
+      );
   }
 }
 
