@@ -1,23 +1,31 @@
 import React from 'react';
 import StoryData from '../../data/stories_data.json';
-
-const storyCopy = (storyNum) => {
-  const num = parseInt(storyNum, 10);
-  const currentStory = StoryData.videos.map(story => {
-    return (num === story.video) ? story.copy : null;
-  })
-
-  const matchingStory = currentStory.filter(item => { return item !== null }).toString();
-
-  return {__html: matchingStory };
-}
+import Card from '../../components/Card/Card';
 
 const Story = ({ match }) => {
   const storyNum = match.params.number;
+  const num = parseInt(storyNum, 10);
+  const allStories = StoryData.videos;
 
   return (
     <div className="story">
-      <div dangerouslySetInnerHTML={storyCopy(storyNum)}/>
+      {allStories.map((item, index) => {
+        return (num === item.video) ?
+          <div className="story__wrapper" key={`story-${index}`}>
+            <Card
+              key={`storyCard-${index}`}
+              className="story-card"
+              title={item.title}
+              image={item.image}
+              story={true}
+            />
+            <div
+              key={`storyCopy=${index}`}
+              className="story__copy"
+              dangerouslySetInnerHTML={{__html: item.copy}}
+            />
+          </div> : '';
+      })}
     </div>
   );
 }
