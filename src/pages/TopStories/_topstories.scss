@@ -1,0 +1,19 @@
+.top-stories {
+
+  &__all-stories-container {
+    @include flex-grid-row();
+  }
+
+  &__all-stories-wrapper {
+    @include flex-grid-column(4);
+  }
+
+  &__post-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__all-stories-card-wrapper {
+    @include flex-grid-column(7);
+  }
+}
