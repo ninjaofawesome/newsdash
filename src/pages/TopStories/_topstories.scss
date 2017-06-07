@@ -1,11 +1,18 @@
 .top-stories {
 
-  &__all-stories-container {
+  &__all-stories-container,
+  &__more-content-container {
     @include flex-grid-row();
   }
 
-  &__all-stories-wrapper {
-    @include flex-grid-column(4);
+  &__all-stories-wrapper,
+  &__sidebar-container {
+    @include flex-grid-column(3);
+  }
+
+  &__stories-wrapper {
+    width: 33%;
+    display: inline-block;
   }
 
   &__post-list {
@@ -13,7 +20,8 @@
     padding: 0;
   }
 
-  &__all-stories-card-wrapper {
-    @include flex-grid-column(7);
+  &__all-stories-card-wrapper,
+  &__post-container {
+    @include flex-grid-column(8);
   }
 }
